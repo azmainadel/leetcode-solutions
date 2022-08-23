@@ -11,5 +11,5 @@ class Solution:
         while cur is not None:
             vals.append(cur.val)
             cur = cur.next
-        
+            
         return vals == vals[::-1]
