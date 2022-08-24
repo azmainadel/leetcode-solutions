@@ -4,9 +4,9 @@ class Solution:
         
         for i in range(len(nums)):
             hashmap[nums[i]] = i
-            
+        
         for i in range(len(nums)):
-            complement = target - nums[i]
+            remaining = target - nums[i]
             
-            if complement in hashmap and hashmap[complement] != i:
-                return [i, hashmap[complement]]
+            if remaining in hashmap and hashmap[remaining] != i:
+                return [i, hashmap[remaining]]
